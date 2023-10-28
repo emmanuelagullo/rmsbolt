@@ -866,7 +866,21 @@ return t if successful."
                           :demangler "c++filt"
                           :compile-cmd-function #'rmsbolt--c-compile-cmd
                           :disass-hidden-funcs rmsbolt--hidden-func-c))
+   (c-ts-mode
+    . ,(make-rmsbolt-lang :compile-cmd "gcc"
+                          :supports-asm t
+                          :supports-disass t
+                          :demangler "c++filt"
+                          :compile-cmd-function #'rmsbolt--c-compile-cmd
+                          :disass-hidden-funcs rmsbolt--hidden-func-c))
    (c++-mode
+    . ,(make-rmsbolt-lang :compile-cmd "g++"
+                          :supports-asm t
+                          :supports-disass t
+                          :demangler "c++filt"
+                          :compile-cmd-function #'rmsbolt--c-compile-cmd
+                          :disass-hidden-funcs rmsbolt--hidden-func-c))
+   (c++-ts-mode
     . ,(make-rmsbolt-lang :compile-cmd "g++"
                           :supports-asm t
                           :supports-disass t
